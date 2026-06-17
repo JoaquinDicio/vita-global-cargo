@@ -2,9 +2,6 @@
 import "../styles/global.css";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import HeroContent from "../components/Hero/HeroContent.astro";
-import HeroServices from "../components/Hero/HeroServices.astro";
-import Services from "../components/Services/Services.astro";
 ---
 
 <html lang="es">
@@ -24,28 +21,7 @@ import Services from "../components/Services/Services.astro";
 		<Header />
 
 		<main>
-			<section id="hero">
-				<div
-					class="bg-cover bg-center"
-					style="background-image: url('/hero.png');"
-				>
-					<div
-						class="bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.4)_55%,transparent_100%)]"
-					>
-						<HeroContent />
-						<HeroServices />
-					</div>
-				</div>
-			</section>
-			<section id="services" class="bg-white">
-				<Services />
-			</section>
-			<section id="experience"></section>
-			<section id="process"></section>
-			<section id="coverage"></section>
-			<section id="culture"></section>
-			<section id="cta"></section>
-			<section id="contact"></section>
+			<slot />
 		</main>
 
 		<Footer />
