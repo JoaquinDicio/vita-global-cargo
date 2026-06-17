@@ -25,8 +25,17 @@ import Services from "../components/Services/Services.astro";
 
 		<main>
 			<section id="hero">
-				<HeroContent />
-				<HeroServices />
+				<div
+					class="bg-cover bg-center"
+					style="background-image: url('/hero.png');"
+				>
+					<div
+						class="bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.4)_55%,transparent_100%)]"
+					>
+						<HeroContent />
+						<HeroServices />
+					</div>
+				</div>
 			</section>
 			<section id="services" class="bg-white">
 				<Services />
