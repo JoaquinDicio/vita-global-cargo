@@ -1,7 +1,26 @@
 ---
 import Container from "../Container.astro";
+import SectionHeader from "../SectionHeader.astro";
 ---
 
-<Container class="min-h-screen pt-48 bg-white">
-    <h2>This is services</h2>
+<Container class="min-h-screen pt-38 pb-20 bg-white">
+    <SectionHeader
+        eyebrow="Nuestros servicios"
+        title="Soluciones logísticas intergrales"
+        description="Operaciones internacionales y cargas especiales con seguimiento directo, sensibilidad y criterio profesional."
+    />
+
+    <div class="grid grid-cols-5 gap-6 mt-10">
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        <div class="h-75 bg-gray-200 rounded-xl"></div>
+    </div>
 </Container>
