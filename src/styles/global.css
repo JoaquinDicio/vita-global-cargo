@@ -1,1 +1,19 @@
 @import "tailwindcss";
+*{
+    font-family: 'Inter', sans-serif;
+}
+
+:root {
+  --color-primary: #041736;
+  --color-secondary: #1175fc;
+  --color-accent: #b82b37;
+  --color-black: #0d0c0b;
+
+  --color-white: #ffffff;
+
+  --color-text: #0d0c0b;
+  --color-text-light: #ffffff;
+
+  --color-background: #ffffff;
+  --color-background-dark: #041736;
+}

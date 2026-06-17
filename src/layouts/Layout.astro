@@ -1,20 +1,44 @@
 ---
 import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import HeroContent from "../components/Hero/HeroContent.astro";
+import HeroServices from "../components/Hero/HeroServices.astro";
+import Services from "../components/Services/Services.astro";
 ---
 
-<!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+			rel="stylesheet"
+		/>
 	</head>
-	<body>
-		<slot />
+	<body class="bg-slate-950 text-white">
+		<Header />
+
+		<main>
+			<section id="hero">
+				<HeroContent />
+				<HeroServices />
+			</section>
+			<section id="services" class="bg-white">
+				<Services />
+			</section>
+			<section id="experience"></section>
+			<section id="process"></section>
+			<section id="coverage"></section>
+			<section id="culture"></section>
+			<section id="cta"></section>
+			<section id="contact"></section>
+		</main>
+
+		<Footer />
 	</body>
 </html>
-
-<style></style>
