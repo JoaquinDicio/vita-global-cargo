@@ -3,10 +3,14 @@ import Layout from "../layouts/Layout.astro";
 import HeroContent from "../components/Hero/HeroContent.astro";
 import HeroServices from "../components/Hero/HeroServices.astro";
 import Services from "../components/Services/Services.astro";
+import Container from "../components/Container.astro";
+import ProcessContent from "../components/Process/ProcessContent.astro";
+import CultureContent from "../components/Culture/CultureContent.astro";
 ---
 
 <Layout>
     <section id="hero">
+        <!-- background and gradient -->
         <div
             class="bg-cover bg-center"
             style="background-image: url('/hero.png');"
@@ -23,10 +27,95 @@ import Services from "../components/Services/Services.astro";
     <section id="services" class="bg-white">
         <Services />
     </section>
-    <section id="experience"></section>
-    <section id="process"></section>
-    <section id="coverage"></section>
-    <section id="culture"></section>
-    <section id="cta"></section>
+
+    <Container class="bg-(--color-primary)">
+        <div class="py-10 flex items-center justify-between gap-16">
+            <div class="max-w-md p-5">
+                <h3 class="text-white text-[28px] font-bold leading-tight">
+                    30 años de experiencia en logística internacional
+                </h3>
+
+                <p class="mt-4 text-white/90 text-[14px] leading-relaxed">
+                    Nuestro compromiso, trayectoria y red global nos permite
+                    ofrecer soluciones confiables, ágiles y personalizadas.
+                </p>
+            </div>
+
+            <div class="flex items-center">
+                <div class="px-8">
+                    <h4
+                        class="text-(--color-accent) text-[40px] font-bold leading-none"
+                    >
+                        30+
+                    </h4>
+
+                    <p class="mt-2 text-white text-[14px] leading-tight">
+                        Años de trayectoria
+                    </p>
+                </div>
+
+                <div class="h-20 w-px bg-white/30"></div>
+
+                <div class="px-8">
+                    <h4
+                        class="text-(--color-accent) text-[24px] font-bold leading-none"
+                    >
+                        Red global
+                    </h4>
+
+                    <p class="mt-2 text-white text-[14px] leading-tight">
+                        Agentes en el exterior
+                    </p>
+                </div>
+
+                <div class="h-20 w-px bg-white/30"></div>
+
+                <div class="px-8">
+                    <h4
+                        class="text-(--color-accent) text-[24px] font-bold leading-none"
+                    >
+                        Respuesta rápida
+                    </h4>
+
+                    <p class="mt-2 text-white text-[14px] leading-tight">
+                        Atención personalizada
+                    </p>
+                </div>
+            </div>
+        </div>
+    </Container>
+
+    <section id="process" class="bg-white">
+        <ProcessContent />
+    </section>
+
+    <div class="bg-cover bg-center" style="background-image: url('/hero.png');">
+        <div
+            class="py-10 bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.2)_50%,rgba(8,21,40,0.8)_70%,rgba(8,21,40,1)_100%)]"
+        >
+            <Container class="flex items-center justify-between">
+                <div class="max-w-sm">
+                    <h3 class="font-bold text-[24px] mb-5">
+                        ¿Necesitas importar o exportar mercadería?
+                    </h3>
+                    <p class="text-[14px]">
+                        Te acompañamos en cada paso para que tu operación sea
+                        simple, segura y eficiente.
+                    </p>
+                </div>
+                <a
+                    href="#contact"
+                    class="inline-flex mt-5 items-center bg-(--color-accent) justify-center text-[14px] px-6 py-4 rounded-md font-semibold text-white hover:bg-red-600 transition"
+                >
+                    Solicitar Cotización
+                </a>
+            </Container>
+        </div>
+    </div>
+
+    <section id="culture" class="bg-white">
+        <CultureContent />
+    </section>
+
     <section id="contact"></section>
 </Layout>
