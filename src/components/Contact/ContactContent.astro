@@ -1,0 +1,146 @@
+---
+import Container from "../Container.astro";
+import SectionHeader from "../SectionHeader.astro";
+import plane from "../../assets/icons/plane.svg";
+import boat from "../../assets/icons/boat.svg";
+import truck from "../../assets/icons/truck.svg";
+import courier from "../../assets/icons/package.svg";
+---
+
+<Container class="py-22">
+    <div class="grid grid-cols-2 gap-20 items-center">
+        <!-- Columna izquierda -->
+        <div>
+            <SectionHeader
+                text_color="light"
+                align="left"
+                eyebrow="contactanos"
+                title="Conectamos tu negocio con el mundo"
+                description="A lo largo de nuestra trayectoria aprendimos que la logística no se trata solamente de mover carga. "
+            />
+
+            <p class="mt-6 text-white font-semibold max-w-md">
+                Se trata de generar confianza, cumplir compromisos y construir
+                relaciones que perduren en el tiempo.
+            </p>
+
+            <!-- Servicios -->
+            <div class="grid grid-cols-2 gap-x-12 gap-y-8 mt-12">
+                <!-- Item -->
+                <div class="flex items-center gap-4">
+                    <img src={courier.src} alt="" class="w-14.5 h-12.25" />
+
+                    <div>
+                        <h3 class="text-white font-semibold">
+                            Courier y express
+                        </h3>
+
+                        <p class="text-white/70">Rapidez y seguridad</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <img src={plane.src} alt="" class="w-[58px] h-[49px]" />
+
+                    <div>
+                        <h3 class="text-white font-semibold">
+                            Transporte Aéreo
+                        </h3>
+
+                        <p class="text-white/70">Conectamos destinos</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <img src={truck.src} alt="" class="w-[58px] h-[49px]" />
+
+                    <div>
+                        <h3 class="text-white font-semibold">
+                            Transporte Terrestre
+                        </h3>
+
+                        <p class="text-white/70">Entregamos confianza</p>
+                    </div>
+                </div>
+
+                <div class="flex items-center gap-4">
+                    <img src={boat.src} alt="" class="w-[58px] h-[49px]" />
+
+                    <div>
+                        <h3 class="text-white font-semibold">
+                            Transporte Marítimo
+                        </h3>
+
+                        <p class="text-white/70">Movemos el mundo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulario -->
+        <div class="max-w-lg ml-auto">
+            <div
+                class="bg-black/35 backdrop-blur-sm rounded-xl p-8 border border-white/10"
+            >
+                <h3 class="text-white text-[20px] font-bold leading-tight">
+                    Hablemos de tu próxima operación
+                </h3>
+
+                <div class="w-12 h-1 bg-(--color-accent) mt-4 mb-8"></div>
+
+                <form class="space-y-3">
+                    <div>
+                        <label class="block text-white text-sm mb-2">
+                            Nombre completo
+                        </label>
+
+                        <input
+                            type="text"
+                            class="w-full h-12 rounded border border-white/30 bg-transparent px-4 text-white"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm mb-2">
+                            Email
+                        </label>
+
+                        <input
+                            type="email"
+                            class="w-full h-12 rounded border border-white/30 bg-transparent px-4 text-white"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm mb-2">
+                            Teléfono
+                        </label>
+
+                        <input
+                            type="text"
+                            class="w-full h-12 rounded border border-white/30 bg-transparent px-4 text-white"
+                        />
+                    </div>
+
+                    <div>
+                        <label class="block text-white text-sm mb-2">
+                            Mensaje
+                        </label>
+
+                        <textarea
+                            rows="5"
+                            class="w-full rounded border border-white/30 bg-transparent px-4 py-3 text-white resize-none"
+                        ></textarea>
+                    </div>
+
+                    <button
+                        type="submit"
+                        class="w-full h-10 rounded bg-(--color-accent) text-white font-semibold"
+                    >
+                        Enviar mensaje
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</Container>

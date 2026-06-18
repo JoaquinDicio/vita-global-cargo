@@ -6,6 +6,7 @@ import Services from "../components/Services/Services.astro";
 import Container from "../components/Container.astro";
 import ProcessContent from "../components/Process/ProcessContent.astro";
 import CultureContent from "../components/Culture/CultureContent.astro";
+import ContactContent from "../components/Contact/ContactContent.astro";
 ---
 
 <Layout>
@@ -29,9 +30,13 @@ import CultureContent from "../components/Culture/CultureContent.astro";
     </section>
 
     <Container class="bg-(--color-primary)">
-        <div class="py-10 flex items-center justify-between gap-16">
-            <div class="max-w-md p-5">
-                <h3 class="text-white text-[28px] font-bold leading-tight">
+        <div
+            class="py-10 flex flex-col md:flex-row items-center md:items-center justify-between gap-10 md:gap-16"
+        >
+            <div class="max-w-md p-5 text-center md:text-left">
+                <h3
+                    class="text-white text-[24px] md:text-[28px] font-bold leading-tight"
+                >
                     30 años de experiencia en logística internacional
                 </h3>
 
@@ -41,10 +46,12 @@ import CultureContent from "../components/Culture/CultureContent.astro";
                 </p>
             </div>
 
-            <div class="flex items-center">
-                <div class="px-8">
+            <div
+                class="grid grid-cols-3 md:flex items-start md:items-center gap-6 md:gap-0 text-center"
+            >
+                <div class="px-0 md:px-8">
                     <h4
-                        class="text-(--color-accent) text-[40px] font-bold leading-none"
+                        class="text-(--color-accent) text-[32px] md:text-[40px] font-bold leading-none"
                     >
                         30+
                     </h4>
@@ -54,11 +61,11 @@ import CultureContent from "../components/Culture/CultureContent.astro";
                     </p>
                 </div>
 
-                <div class="h-20 w-px bg-white/30"></div>
+                <div class="hidden md:block h-20 w-px bg-white/30"></div>
 
-                <div class="px-8">
+                <div class="px-0 md:px-8">
                     <h4
-                        class="text-(--color-accent) text-[24px] font-bold leading-none"
+                        class="text-(--color-accent) text-[20px] md:text-[24px] font-bold leading-none"
                     >
                         Red global
                     </h4>
@@ -68,11 +75,11 @@ import CultureContent from "../components/Culture/CultureContent.astro";
                     </p>
                 </div>
 
-                <div class="h-20 w-px bg-white/30"></div>
+                <div class="hidden md:block h-20 w-px bg-white/30"></div>
 
-                <div class="px-8">
+                <div class="px-0 md:px-8">
                     <h4
-                        class="text-(--color-accent) text-[24px] font-bold leading-none"
+                        class="text-(--color-accent) text-[20px] md:text-[24px] font-bold leading-none"
                     >
                         Respuesta rápida
                     </h4>
@@ -117,5 +124,18 @@ import CultureContent from "../components/Culture/CultureContent.astro";
         <CultureContent />
     </section>
 
-    <section id="contact"></section>
+    <section id="contact">
+        <!-- Fondo -->
+        <div
+            class="bg-cover bg-center"
+            style={`background-image: url('/contact.png')`}
+        >
+            <!-- Overlay -->
+            <div
+                class="bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.85)_30%,rgba(28,75,142,0.3)_55%,rgba(8,21,40,0.85)_70%,rgba(8,21,40,1)_100%)]"
+            >
+                <ContactContent />
+            </div>
+        </div>
+    </section>
 </Layout>

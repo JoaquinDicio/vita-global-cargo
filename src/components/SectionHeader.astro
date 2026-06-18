@@ -4,9 +4,16 @@ interface Props {
     title: string;
     description?: string;
     align?: "left" | "center";
+    text_color?: "dark" | "light";
 }
 
-const { eyebrow, title, description, align = "center" } = Astro.props;
+const {
+    eyebrow,
+    title,
+    description,
+    align = "center",
+    text_color = "dark",
+} = Astro.props;
 
 const isCentered = align === "center";
 ---
@@ -20,7 +27,12 @@ const isCentered = align === "center";
         {eyebrow}
     </span>
 
-    <h2 class="mt-3 text-[28px] font-bold leading-tight text-(--color-black)">
+    <h2
+        class:list={[
+            "mt-3 text-[28px] font-bold leading-tight",
+            text_color == "dark" ? "text-black" : "text-white",
+        ]}
+    >
         {title}
     </h2>
 
@@ -28,8 +40,9 @@ const isCentered = align === "center";
         description && (
             <p
                 class:list={[
-                    "mt-4 text-[16px] leading-relaxed text-black/70 max-w-2xl",
+                    "mt-4 text-[16px] leading-relaxed max-w-2xl ",
                     isCentered && "mx-auto",
+                    text_color === "dark" ? "text-black/70" : "text-white",
                 ]}
             >
                 {description}
