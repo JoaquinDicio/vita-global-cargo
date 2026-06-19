@@ -5,82 +5,104 @@ import plane from "../../assets/icons/plane.svg";
 import boat from "../../assets/icons/boat.svg";
 import truck from "../../assets/icons/truck.svg";
 import courier from "../../assets/icons/package.svg";
+
+const services = [
+    {
+        icon: courier,
+        title: "Courier y express",
+        subtitle: "Rapidez y seguridad",
+    },
+    {
+        icon: plane,
+        title: "Transporte Aéreo",
+        subtitle: "Conectamos destinos",
+    },
+    {
+        icon: truck,
+        title: "Transporte Terrestre",
+        subtitle: "Entregamos confianza",
+    },
+    {
+        icon: boat,
+        title: "Transporte Marítimo",
+        subtitle: "Movemos el mundo",
+    },
+];
 ---
 
-<Container class="py-22">
-    <div class="grid grid-cols-2 gap-20 items-center">
+<Container class="py-16 md:py-22">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
         <!-- Columna izquierda -->
-        <div>
+        <div class="text-center md:text-left">
             <SectionHeader
                 text_color="light"
                 align="left"
                 eyebrow="contactanos"
                 title="Conectamos tu negocio con el mundo"
-                description="A lo largo de nuestra trayectoria aprendimos que la logística no se trata solamente de mover carga. "
+                description="A lo largo de nuestra trayectoria aprendimos que la logística no se trata solamente de mover carga."
             />
 
-            <p class="mt-6 text-white font-semibold max-w-md">
+            <p class="mt-6 text-white font-semibold max-w-md mx-auto md:mx-0">
                 Se trata de generar confianza, cumplir compromisos y construir
                 relaciones que perduren en el tiempo.
             </p>
 
             <!-- Servicios -->
-            <div class="grid grid-cols-2 gap-x-12 gap-y-8 mt-12">
-                <!-- Item -->
-                <div class="flex items-center gap-4">
-                    <img src={courier.src} alt="" class="w-14.5 h-12.25" />
+            <!-- Desktop -->
+            <div class="hidden md:grid grid-cols-2 gap-x-12 gap-y-8 mt-12">
+                {
+                    services.map((service) => (
+                        <div class="flex items-center gap-4">
+                            <img
+                                src={service.icon.src}
+                                alt={service.title}
+                                class="w-[58px] h-[49px]"
+                            />
 
-                    <div>
-                        <h3 class="text-white font-semibold">
-                            Courier y express
-                        </h3>
+                            <div>
+                                <h3 class="text-white font-semibold">
+                                    {service.title}
+                                </h3>
 
-                        <p class="text-white/70">Rapidez y seguridad</p>
-                    </div>
-                </div>
+                                <p class="text-white/70">{service.subtitle}</p>
+                            </div>
+                        </div>
+                    ))
+                }
+            </div>
 
-                <div class="flex items-center gap-4">
-                    <img src={plane.src} alt="" class="w-[58px] h-[49px]" />
+            <!-- Mobile -->
+            <div class="md:hidden mt-12 overflow-hidden">
+                <div class="flex w-max animate-marquee">
+                    {
+                        [...services, ...services].map((service) => (
+                            <div class="flex items-center gap-4 px-8 shrink-0">
+                                <img
+                                    src={service.icon.src}
+                                    alt={service.title}
+                                    class="w-[58px] h-[49px]"
+                                />
 
-                    <div>
-                        <h3 class="text-white font-semibold">
-                            Transporte Aéreo
-                        </h3>
+                                <div>
+                                    <h3 class="text-white font-semibold whitespace-nowrap">
+                                        {service.title}
+                                    </h3>
 
-                        <p class="text-white/70">Conectamos destinos</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <img src={truck.src} alt="" class="w-[58px] h-[49px]" />
-
-                    <div>
-                        <h3 class="text-white font-semibold">
-                            Transporte Terrestre
-                        </h3>
-
-                        <p class="text-white/70">Entregamos confianza</p>
-                    </div>
-                </div>
-
-                <div class="flex items-center gap-4">
-                    <img src={boat.src} alt="" class="w-[58px] h-[49px]" />
-
-                    <div>
-                        <h3 class="text-white font-semibold">
-                            Transporte Marítimo
-                        </h3>
-
-                        <p class="text-white/70">Movemos el mundo</p>
-                    </div>
+                                    <p class="text-white/70 whitespace-nowrap">
+                                        {service.subtitle}
+                                    </p>
+                                </div>
+                            </div>
+                        ))
+                    }
                 </div>
             </div>
         </div>
 
         <!-- Formulario -->
-        <div class="max-w-lg ml-auto">
+        <div class="w-full max-w-lg mx-auto md:ml-auto">
             <div
-                class="bg-black/35 backdrop-blur-sm rounded-xl p-8 border border-white/10"
+                class="bg-black/35 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/10"
             >
                 <h3 class="text-white text-[20px] font-bold leading-tight">
                     Hablemos de tu próxima operación

@@ -3,14 +3,16 @@ import Container from "../Container.astro";
 import SectionHeader from "../SectionHeader.astro";
 ---
 
-<Container class="min-h-screen pt-38 pb-20 bg-white">
+<Container class="pt-24 md:pt-32 lg:pt-38 pb-16 md:pb-20 bg-white">
     <SectionHeader
         eyebrow="Nuestros servicios"
-        title="Soluciones logísticas intergrales"
+        title="Soluciones logísticas integrales"
         description="Operaciones internacionales y cargas especiales con seguimiento directo, sensibilidad y criterio profesional."
     />
 
-    <div class="grid grid-cols-5 gap-6 mt-10">
+    <div
+        class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-10"
+    >
         <div class="h-75 bg-gray-200 rounded-xl"></div>
         <div class="h-75 bg-gray-200 rounded-xl"></div>
         <div class="h-75 bg-gray-200 rounded-xl"></div>

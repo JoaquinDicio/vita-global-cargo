@@ -19,7 +19,10 @@ const isCentered = align === "center";
 ---
 
 <div
-    class:list={["max-w-3xl", isCentered ? "mx-auto text-center" : "text-left"]}
+    class:list={[
+        "max-w-3xl text-center",
+        isCentered ? "mx-auto" : "md:text-left",
+    ]}
 >
     <span
         class="block text-[16px] font-bold uppercase tracking-wide text-(--color-accent)"
@@ -30,7 +33,7 @@ const isCentered = align === "center";
     <h2
         class:list={[
             "mt-3 text-[28px] font-bold leading-tight",
-            text_color == "dark" ? "text-black" : "text-white",
+            text_color === "dark" ? "text-black" : "text-white",
         ]}
     >
         {title}
@@ -40,8 +43,9 @@ const isCentered = align === "center";
         description && (
             <p
                 class:list={[
-                    "mt-4 text-[16px] leading-relaxed max-w-2xl ",
+                    "mt-4 text-[16px] leading-relaxed max-w-2xl",
                     isCentered && "mx-auto",
+                    !isCentered && "md:mx-0 mx-auto",
                     text_color === "dark" ? "text-black/70" : "text-white",
                 ]}
             >
