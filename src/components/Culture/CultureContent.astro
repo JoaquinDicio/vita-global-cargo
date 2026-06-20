@@ -1,10 +1,50 @@
 ---
 import Container from "../Container.astro";
 import SectionHeader from "../SectionHeader.astro";
+import people from "../../assets/icons/people.svg";
+import global from "../../assets/icons/global.png";
+import done from "../../assets/icons/done.png";
+import shield from "../../assets/icons/shield.png";
+import up from "../../assets/icons/uparrow.png";
+import experience from "../../assets/icons/30+.svg";
+
+const culture_info = [
+    {
+        icon: people,
+        title: "Valoramos a las personas",
+        description: "Escuchamos, reconocemos y potenciamos el talento.",
+    },
+    {
+        icon: global,
+        title: "Mirada global, atención local",
+        description: "Pensamos globalmente, pero nos mantenemos cerca tuyo.",
+    },
+    {
+        icon: done,
+        title: "Confianza que se gana",
+        description:
+            "Se construye con tansparencia, comunicación y resultados.",
+    },
+    {
+        icon: shield,
+        title: "Compromiso real",
+        description: "Tu carga importa tanto para nosotros como para vos.",
+    },
+    {
+        icon: up,
+        title: "Mejora continua",
+        description: "Buscamos ser mejores para acompañar tu crecimiento.",
+    },
+    {
+        icon: experience,
+        title: "Experiencia",
+        description: "Para anticiparnos y encontrar mejores soluciones.",
+    },
+];
 ---
 
 <Container
-    class="py-16 md:py-22 flex flex-col md:flex-row justify-between items-center md:items-start gap-12 md:gap-16"
+    class="py-16 md:py-22 flex flex-col lg:flex-row justify-between items-center md:items-start gap-12 md:gap-16"
 >
     <div class="max-w-lg text-center md:text-left">
         <SectionHeader
@@ -20,12 +60,27 @@ import SectionHeader from "../SectionHeader.astro";
         </p>
     </div>
 
-    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full md:w-xl">
-        <div class="aspect-square rounded bg-gray-200">1</div>
-        <div class="aspect-square rounded bg-gray-200">2</div>
-        <div class="aspect-square rounded bg-gray-200">3</div>
-        <div class="aspect-square rounded bg-gray-200">4</div>
-        <div class="aspect-square rounded bg-gray-200">5</div>
-        <div class="aspect-square rounded bg-gray-200">6</div>
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full lg:w-xl">
+        {
+            culture_info.map((info) => (
+                <div class="min-h-55 md:min-h-auto md:aspect-square p-3 rounded bg-white shadow-[0_0_15px_rgba(0,0,0,0.08)] flex flex-col items-center justify-center text-center text-black">
+                    <div class="h-14 flex items-center justify-center">
+                        <img
+                            class={`object-contain w-auto ${
+                                info.title === "Experiencia" ? "h-10" : "h-14"
+                            }`}
+                            src={info.icon.src}
+                            alt={info.title}
+                        />
+                    </div>
+
+                    <h4 class="mt-3 lg:max-w-32 text-sm font-bold leading-tight min-h-10 flex items-center">
+                        {info.title}
+                    </h4>
+
+                    <p class="text-[12px] leading-tight">{info.description}</p>
+                </div>
+            ))
+        }
     </div>
 </Container>

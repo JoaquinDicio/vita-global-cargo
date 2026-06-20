@@ -1,6 +1,5 @@
 ---
 import Layout from "../layouts/Layout.astro";
-
 import HeroContent from "../components/Hero/HeroContent.astro";
 import HeroServices from "../components/Hero/HeroServices.astro";
 import Services from "../components/Services/Services.astro";
@@ -8,26 +7,19 @@ import Container from "../components/Container.astro";
 import ProcessContent from "../components/Process/ProcessContent.astro";
 import CultureContent from "../components/Culture/CultureContent.astro";
 import ContactContent from "../components/Contact/ContactContent.astro";
-
 import es from "../i18n/es";
-import en from "../i18n/en";
-
-// 🔥 idioma único (después lo vas a automatizar)
-const lang = "en";
-
-// 🔥 selector único de traducción
-const t = lang === "en" ? en : es;
 ---
 
-<Layout lang={lang}>
+<Layout>
     <section id="hero">
+        <!-- background and gradient -->
         <div
             class="bg-cover bg-center"
             style="background-image: url('/hero.png');"
         >
             <div
                 class="bg-[linear-gradient(to_bottom,rgba(8,21,40,1)_0%,rgba(8,21,40,0.85)_45%,rgba(28,75,142,0.35)_100%)]
-                md:bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.4)_55%,transparent_100%)]"
+        md:bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.4)_55%,transparent_100%)]"
             >
                 <HeroContent />
                 <HeroServices />
@@ -47,11 +39,11 @@ const t = lang === "en" ? en : es;
                 <h3
                     class="text-white text-[24px] md:text-[28px] font-bold leading-tight"
                 >
-                    {t.experienceBanner.title}
+                    {es.experienceBanner.title}
                 </h3>
 
                 <p class="mt-4 text-white/90 text-[14px] leading-relaxed">
-                    {t.experienceBanner.description}
+                    {es.experienceBanner.description}
                 </p>
             </div>
 
@@ -64,10 +56,11 @@ const t = lang === "en" ? en : es;
                         <h4
                             class="text-(--color-accent) text-[32px] font-bold leading-none"
                         >
-                            {t.experienceBanner.stats.years.value}
+                            30+
                         </h4>
+
                         <p class="mt-2 text-white text-[14px] leading-tight">
-                            {t.experienceBanner.stats.years.label}
+                            {es.experienceBanner.stats.years.label}
                         </p>
                     </div>
 
@@ -75,10 +68,11 @@ const t = lang === "en" ? en : es;
                         <h4
                             class="text-(--color-accent) text-[18px] font-bold leading-none"
                         >
-                            {t.experienceBanner.stats.network.value}
+                            {es.experienceBanner.stats.network.value}
                         </h4>
+
                         <p class="mt-2 text-white text-[14px] leading-tight">
-                            {t.experienceBanner.stats.network.label}
+                            {es.experienceBanner.stats.network.label}
                         </p>
                     </div>
 
@@ -86,24 +80,26 @@ const t = lang === "en" ? en : es;
                         <h4
                             class="text-(--color-accent) text-[18px] font-bold leading-none"
                         >
-                            {t.experienceBanner.stats.response.value}
+                            {es.experienceBanner.stats.response.value}
                         </h4>
+
                         <p class="mt-2 text-white text-[14px] leading-tight">
-                            {t.experienceBanner.stats.response.label}
+                            {es.experienceBanner.stats.response.label}
                         </p>
                     </div>
                 </div>
 
-                <!-- Desktop -->
+                <!-- Desktop original -->
                 <div class="hidden md:flex items-center">
                     <div class="px-8">
                         <h4
                             class="text-(--color-accent) text-[40px] font-bold leading-none"
                         >
-                            {t.experienceBanner.stats.years.value}
+                            30+
                         </h4>
+
                         <p class="mt-2 text-white text-[14px] leading-tight">
-                            {t.experienceBanner.stats.years.label}
+                            {es.experienceBanner.stats.years.label}
                         </p>
                     </div>
 
@@ -113,10 +109,11 @@ const t = lang === "en" ? en : es;
                         <h4
                             class="text-(--color-accent) text-[24px] font-bold leading-none"
                         >
-                            {t.experienceBanner.stats.network.value}
+                            {es.experienceBanner.stats.network.value}
                         </h4>
+
                         <p class="mt-2 text-white text-[14px] leading-tight">
-                            {t.experienceBanner.stats.network.label}
+                            {es.experienceBanner.stats.network.label}
                         </p>
                     </div>
 
@@ -126,10 +123,11 @@ const t = lang === "en" ? en : es;
                         <h4
                             class="text-(--color-accent) text-[24px] font-bold leading-none"
                         >
-                            {t.experienceBanner.stats.response.value}
+                            {es.experienceBanner.stats.response.value}
                         </h4>
+
                         <p class="mt-2 text-white text-[14px] leading-tight">
-                            {t.experienceBanner.stats.response.label}
+                            {es.experienceBanner.stats.response.label}
                         </p>
                     </div>
                 </div>
@@ -144,27 +142,25 @@ const t = lang === "en" ? en : es;
     <div class="bg-cover bg-center" style="background-image: url('/hero.png');">
         <div
             class="py-10
-            bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.2)_50%,rgba(8,21,40,0.8)_70%,rgba(8,21,40,1)_100%)]
-            max-md:bg-[rgba(8,21,40,0.75)]"
+        bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.2)_50%,rgba(8,21,40,0.8)_70%,rgba(8,21,40,1)_100%)]
+        max-md:bg-[rgba(8,21,40,0.75)]"
         >
             <Container
                 class="text-center md:text-left flex md:flex-row flex-col md:items-center justify-center md:justify-between"
             >
                 <div class="max-w-none md:max-w-sm">
                     <h3 class="font-bold text-[24px] mb-5">
-                        {t.cta.title}
+                        {es.cta.title}
                     </h3>
-
                     <p class="text-[14px]">
-                        {t.cta.description}
+                        {es.cta.description}
                     </p>
                 </div>
-
                 <a
                     href="#contact"
                     class="inline-flex mt-5 items-center bg-(--color-accent) justify-center text-[14px] px-6 py-4 rounded-md font-semibold text-white hover:bg-red-600 transition"
                 >
-                    {t.cta.button}
+                    {es.cta.button}
                 </a>
             </Container>
         </div>
@@ -175,10 +171,12 @@ const t = lang === "en" ? en : es;
     </section>
 
     <section id="contact">
+        <!-- Fondo -->
         <div
             class="bg-cover md:bg-center bg-top-center"
-            style="background-image: url('/contact.png')"
+            style={`background-image: url('/contact.png')`}
         >
+            <!-- Overlay -->
             <div
                 class="bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.85)_30%,rgba(28,75,142,0.3)_55%,rgba(8,21,40,0.85)_70%,rgba(8,21,40,1)_100%)]"
             >

@@ -1,3 +1,8 @@
+---
+const { t } = Astro.props;
+const year = new Date().getFullYear();
+---
+
 <footer class="bg-[var(--color-primary)] text-white">
     <div class="max-w-7xl mx-auto px-6 py-16">
         <div class="grid gap-12 lg:grid-cols-3">
@@ -10,39 +15,44 @@
                 />
 
                 <p class="max-w-sm text-sm leading-relaxed text-white/70">
-                    Soluciones logísticas internacionales aéreas, marítimas y
-                    terrestres con atención personalizada para cada operación.
+                    {t.footer.description}
                 </p>
             </div>
 
             <!-- Navegación -->
             <div>
-                <h3 class="mb-4 font-semibold">Navegación</h3>
+                <h3 class="mb-4 font-semibold">
+                    {t.footer.navigation.title}
+                </h3>
 
                 <ul class="space-y-3 text-sm text-white/70">
-                    <li><a href="#services">Servicios</a></li>
-                    <li><a href="#culture">Nuestra Cultura</a></li>
-                    <li><a href="#identity">Identidad</a></li>
-                    <li><a href="#contact">Contacto</a></li>
+                    {
+                        t.footer.navigation.links.map((link) => (
+                            <li>
+                                <a href={link.href}>{link.label}</a>
+                            </li>
+                        ))
+                    }
                 </ul>
             </div>
 
             <!-- Contacto -->
             <div>
-                <h3 class="mb-4 font-semibold">Contacto</h3>
+                <h3 class="mb-4 font-semibold">
+                    {t.footer.contact.title}
+                </h3>
 
                 <ul class="space-y-3 text-sm text-white/70">
-                    <li>info@vitaglobalcargo.com</li>
-                    <li>+54 11 1234 5678</li>
-                    <li>Buenos Aires, Argentina</li>
+                    <li>{t.footer.contact.email}</li>
+                    <li>{t.footer.contact.phone}</li>
+                    <li>{t.footer.contact.location}</li>
                 </ul>
             </div>
         </div>
 
         <div class="mt-12 border-t border-white/10 pt-6">
             <p class="text-center text-sm text-white/50">
-                © {new Date().getFullYear()} Vita Global Cargo. Todos los derechos
-                reservados.
+                © {year} Vita Global Cargo. {t.footer.copyright}
             </p>
         </div>
     </div>
