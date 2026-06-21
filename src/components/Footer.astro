@@ -1,4 +1,5 @@
 ---
+import logo from "../assets/white-logo.png";
 const { lang, t } = Astro.props;
 const year = new Date().getFullYear();
 ---
@@ -9,9 +10,9 @@ const year = new Date().getFullYear();
             <!-- Marca -->
             <div>
                 <img
-                    src="/logo-white.svg"
+                    src={logo.src}
                     alt="Vita Global Cargo"
-                    class="h-12 w-auto mb-6"
+                    class="h-18 w-auto mb-6"
                 />
 
                 <p class="max-w-sm text-sm leading-relaxed text-white/70">

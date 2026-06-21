@@ -1,29 +1,79 @@
 ---
 import Container from "../Container.astro";
 import SectionHeader from "../SectionHeader.astro";
-const { lang, t } = Astro.props;
+
+import {
+    Plane,
+    Ship,
+    Truck,
+    Package,
+    ArrowDownToLine,
+    ArrowUpFromLine,
+    Snowflake,
+    HeartHandshake,
+    ShieldCheck,
+    Route,
+} from "lucide-astro";
+
+const { t } = Astro.props;
+
+interface Service {
+    title: string;
+    description: string;
+}
+
+const icons = [
+    Package,
+    Plane,
+    Truck,
+    Ship,
+    ArrowDownToLine,
+    ArrowUpFromLine,
+    Snowflake,
+    HeartHandshake,
+    ShieldCheck,
+    Route,
+];
+
+const services = (t.services.items as Service[]).map((service, index) => ({
+    ...service,
+    icon: icons[index],
+}));
 ---
 
 <Container class="pt-24 md:pt-32 lg:pt-38 pb-16 md:pb-20 bg-white">
     <SectionHeader
-        eyebrow={t.servicesSection.eyebrow}
-        title={t.servicesSection.title}
-        description={t.servicesSection.description}
+        eyebrow={t.services.eyebrow}
+        title={t.services.title}
+        description={t.services.description}
     />
 
     <div
         class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mt-10"
     >
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
+        {
+            services.map((service) => {
+                const Icon = service.icon;
 
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
-        <div class="h-75 bg-gray-200 rounded-xl"></div>
+                return (
+                    <article class="bg-white rounded-xl p-6 border border-gray-100 shadow-[0_0_18px_rgba(0,0,0,0.08)] hover:shadow-[0_0_28px_rgba(0,0,0,0.12)] transition">
+                        <div class="h-14 flex items-center">
+                            <Icon
+                                class="w-12 h-12 text-(--color-accent)"
+                                stroke-width={1.75}
+                            />
+                        </div>
+
+                        <h3 class="mt-5 text-(--color-text) font-bold text-[18px] leading-tight">
+                            {service.title}
+                        </h3>
+
+                        <p class="mt-3 text-black/70 text-[14px] leading-relaxed">
+                            {service.description}
+                        </p>
+                    </article>
+                );
+            })
+        }
     </div>
 </Container>

@@ -1,5 +1,6 @@
 ---
 const { t, lang } = Astro.props;
+import logo from "../assets/white-logo.png";
 
 const switchLangHref = lang === "en" ? "/" : "/en";
 const switchLangLabel = lang === "en" ? "ES" : "EN";
@@ -14,9 +15,9 @@ const switchLangLabel = lang === "en" ? "ES" : "EN";
             <!-- Logo -->
             <a href={lang === "en" ? "/en" : "/"}>
                 <img
-                    src="/logo-white.svg"
+                    src={logo.src}
                     alt="Vita Global Cargo"
-                    class="h-10 md:h-14 w-auto"
+                    class="h-32 md:h-44 w-auto"
                 />
             </a>
 

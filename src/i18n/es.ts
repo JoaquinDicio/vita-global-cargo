@@ -39,11 +39,64 @@ export default {
         },
     ],
 
-    servicesSection: {
+    services: {
         eyebrow: "Nuestros servicios",
         title: "Soluciones logísticas integrales",
         description:
             "Operaciones internacionales y cargas especiales con seguimiento directo, sensibilidad y criterio profesional.",
+
+        items: [
+            {
+                title: "Transporte aéreo internacional",
+                description:
+                    "Conectamos tu carga con los principales destinos del mundo.",
+            },
+            {
+                title: "Transporte marítimo internacional",
+                description:
+                    "Soluciones eficientes y seguras para cargas de todo tipo.",
+            },
+            {
+                title: "Transporte terrestre",
+                description:
+                    "Cobertura nacional e internacional con seguimiento continuo.",
+            },
+            {
+                title: "Courier",
+                description:
+                    "Envíos rápidos y seguros puerta a puerta.",
+            },
+            {
+                title: "Importaciones",
+                description:
+                    "Asesoramiento y gestión integral para tus importaciones.",
+            },
+            {
+                title: "Exportaciones",
+                description:
+                    "Acompañamos tu carga desde origen hasta destino final.",
+            },
+            {
+                title: "Carga perecedera",
+                description:
+                    "Transporte con cadena de frío, control de tiempos y temperatura.",
+            },
+            {
+                title: "Envío internacional de cenizas",
+                description:
+                    "Gestión segura, respetuosa y confiable en todo el mundo.",
+            },
+            {
+                title: "Repatriaciones y traslados de féretros",
+                description:
+                    "Acompañamos con sensibilidad y profesionalismo en momentos difíciles.",
+            },
+            {
+                title: "Distribución y tránsitos al interior del país",
+                description:
+                    "Red de distribución para llegar a donde lo necesites.",
+            },
+        ],
     },
 
     process: {

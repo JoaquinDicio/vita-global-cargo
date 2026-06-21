@@ -40,11 +40,64 @@ export default {
         },
     ],
 
-    servicesSection: {
+    services: {
         eyebrow: "Our Services",
         title: "Integrated Logistics Solutions",
         description:
             "International operations and specialized cargo services with direct follow-up, attention to detail, and professional expertise.",
+
+        items: [
+            {
+                title: "International Air Freight",
+                description:
+                    "Connecting your cargo with major destinations around the world.",
+            },
+            {
+                title: "International Ocean Freight",
+                description:
+                    "Efficient and secure solutions for all types of cargo.",
+            },
+            {
+                title: "Ground Transportation",
+                description:
+                    "Domestic and international coverage with continuous tracking.",
+            },
+            {
+                title: "Courier Services",
+                description:
+                    "Fast and secure door-to-door deliveries.",
+            },
+            {
+                title: "Imports",
+                description:
+                    "Comprehensive consulting and management for your import operations.",
+            },
+            {
+                title: "Exports",
+                description:
+                    "We support your cargo from origin to final destination.",
+            },
+            {
+                title: "Perishable Cargo",
+                description:
+                    "Cold-chain transportation with temperature and time control.",
+            },
+            {
+                title: "International Ashes Transportation",
+                description:
+                    "Safe, respectful, and reliable handling worldwide.",
+            },
+            {
+                title: "Repatriation and Coffin Transfers",
+                description:
+                    "Providing professional and compassionate assistance during difficult times.",
+            },
+            {
+                title: "Domestic Distribution and Inland Transit",
+                description:
+                    "A distribution network that reaches wherever you need.",
+            },
+        ],
     },
 
     process: {
