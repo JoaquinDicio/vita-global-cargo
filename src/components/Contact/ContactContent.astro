@@ -7,7 +7,7 @@ import boat from "../../assets/icons/boat.svg";
 import truck from "../../assets/icons/truck.svg";
 import courier from "../../assets/icons/package.svg";
 
-const { lang: t } = Astro.props;
+const { lang, t } = Astro.props;
 
 interface Service {
     title: string;
@@ -46,7 +46,7 @@ const services = (t.contact.services as Service[]).map((service, index) => ({
                             <img
                                 src={service.icon.src}
                                 alt={service.title}
-                                class="w-[58px] h-[49px]"
+                                class="w-14.5 h-14.5"
                             />
 
                             <div>
@@ -70,7 +70,7 @@ const services = (t.contact.services as Service[]).map((service, index) => ({
                                 <img
                                     src={service.icon.src}
                                     alt={service.title}
-                                    class="w-[58px] h-[49px]"
+                                    class="w-14.5 h-14.5"
                                 />
 
                                 <div>
