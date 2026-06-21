@@ -1,5 +1,5 @@
-// es.ts
-export default {
+import type { Language } from "./types";
+const es: Language = {
     header: {
         links: [
             { href: "#services", label: "Servicios" },
@@ -281,3 +281,5 @@ export default {
         copyright: "Todos los derechos reservados",
     },
 };
+
+export default es
