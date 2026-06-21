@@ -12,6 +12,81 @@ export default {
         mobileCta: "Solicitar Cotización",
         ariaMenu: "Abrir menú",
     },
+
+    hero: {
+        eyebrown: "Logistica internacional con atención personal",
+        title: { white: "Conectamos", red: "lo que importa" },
+        description: "Soluciones logísticas internacionales aéreas, marítimas y terrestres, con la confianza, el profesionalismo y el compromiso que tu negocio necesita.",
+        button: "Hablar con un especialista"
+    },
+
+    heroServices: [
+        {
+            title: "Transporte Aéreo",
+            subtitle: "Conectamos destinos",
+        },
+        {
+            title: "Transporte Marítimo",
+            subtitle: "Movemos el mundo",
+        },
+        {
+            title: "Transporte Terrestre",
+            subtitle: "Entregamos confianza",
+        },
+        {
+            title: "Courier",
+            subtitle: "Rapidez y seguridad",
+        },
+    ],
+
+    servicesSection: {
+        eyebrow: "Nuestros servicios",
+        title: "Soluciones logísticas integrales",
+        description:
+            "Operaciones internacionales y cargas especiales con seguimiento directo, sensibilidad y criterio profesional.",
+    },
+
+    process: {
+        eyebrow: "CÓMO TRABAJAMOS EN VITA",
+
+        title: "Claridad desde el primer contacto",
+
+        description:
+            "Buscamos que cada cliente tenga visibilidad, alternativas y acompañamiento real.",
+
+        steps: [
+            {
+                title: "Escuchamos",
+                description:
+                    "Entendemos la operación, origen, destino y tipo de carga.",
+            },
+            {
+                title: "Cotizamos",
+                description:
+                    "Presentamos alternativas claras, viables y competitivas.",
+            },
+            {
+                title: "Coordinamos",
+                description:
+                    "Gestionamos cada etapa con comunicación directa.",
+            },
+            {
+                title: "Cumplimos",
+                description:
+                    "Acompañamos hasta el cierre cuidando carga, tiempos y relación.",
+            },
+        ],
+
+        world: {
+            title: "Conectamos tu carga con el mundo",
+
+            description:
+                "Contamos con convenios y una red de agentes estratégicos en los principales países para coordinar importaciones y exportaciones con eficiencia y seguridad.",
+
+            button: "Hablar con un especialista",
+        },
+    },
+
     experienceBanner: {
         title: "30 años de experiencia en logística internacional",
         description:

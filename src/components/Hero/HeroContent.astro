@@ -1,5 +1,8 @@
 ---
 import Container from "../Container.astro";
+import en from "../../i18n/en";
+import es from "../../i18n/es";
+const { lang: t } = Astro.props;
 ---
 
 <Container
@@ -7,25 +10,24 @@ import Container from "../Container.astro";
 >
     <div class="max-w-xl text-center md:text-left">
         <h2 class="uppercase font-bold text-white text-[14px]">
-            Logistica internacional con atención personal
+            {t.hero.eyebrown}
         </h2>
 
         <h3 class="font-bold text-[36px] md:text-[46px] leading-tight mt-2">
-            Conectamos <br />
-            <span class="text-(--color-accent)">lo que importa</span>
+            {t.hero.title.white}
+            <br />
+            <span class="text-(--color-accent)">{t.hero.title.red}</span>
         </h3>
 
         <p class="text-[14px] font-light mt-5 mb-7 max-w-md mx-auto md:mx-0">
-            Soluciones logísticas internacionales aéreas, marítimas y
-            terrestres, con la confianza, el profesionalismo y el compromiso que
-            tu negocio necesita.
+            {t.hero.description}
         </p>
 
         <a
             href="#contact"
             class="inline-flex items-center justify-center border border-white text-[14px] px-8 py-4 rounded-md font-semibold text-white hover:bg-white hover:text-(--color-primary) transition"
         >
-            Hablar con un especialista
+            {t.hero.button}
         </a>
     </div>
 </Container>

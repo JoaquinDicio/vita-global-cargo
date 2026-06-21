@@ -12,10 +12,8 @@ import ContactContent from "../components/Contact/ContactContent.astro";
 import es from "../i18n/es";
 import en from "../i18n/en";
 
-// 🔥 idioma único (después lo vas a automatizar)
 const lang = "en";
 
-// 🔥 selector único de traducción
 const t = lang === "en" ? en : es;
 ---
 
@@ -29,14 +27,14 @@ const t = lang === "en" ? en : es;
                 class="bg-[linear-gradient(to_bottom,rgba(8,21,40,1)_0%,rgba(8,21,40,0.85)_45%,rgba(28,75,142,0.35)_100%)]
                 md:bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.4)_55%,transparent_100%)]"
             >
-                <HeroContent />
-                <HeroServices />
+                <HeroContent lang={t} />
+                <HeroServices lang={t} />
             </div>
         </div>
     </section>
 
     <section id="services" class="bg-white">
-        <Services />
+        <Services lang={t} />
     </section>
 
     <Container class="bg-(--color-primary)">
@@ -138,7 +136,7 @@ const t = lang === "en" ? en : es;
     </Container>
 
     <section id="process" class="bg-white">
-        <ProcessContent />
+        <ProcessContent lang={t} />
     </section>
 
     <div class="bg-cover bg-center" style="background-image: url('/hero.png');">

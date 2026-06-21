@@ -1,30 +1,29 @@
 ---
 import Container from "../Container.astro";
+
 import plane from "../../assets/icons/plane.svg";
 import boat from "../../assets/icons/boat.svg";
 import truck from "../../assets/icons/truck.svg";
 import courier from "../../assets/icons/package.svg";
 
+const { lang: t } = Astro.props;
+
 const services = [
     {
         icon: plane,
-        title: "Transporte Aéreo",
-        subtitle: "Conectamos destinos",
+        ...t.heroServices[0],
     },
     {
         icon: boat,
-        title: "Transporte Marítimo",
-        subtitle: "Movemos el mundo",
+        ...t.heroServices[1],
     },
     {
         icon: truck,
-        title: "Transporte Terrestre",
-        subtitle: "Entregamos confianza",
+        ...t.heroServices[2],
     },
     {
         icon: courier,
-        title: "Courier",
-        subtitle: "Rapidez y seguridad",
+        ...t.heroServices[3],
     },
 ];
 ---
