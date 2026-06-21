@@ -118,6 +118,94 @@ export default {
         button: "Request a Quote",
     },
 
+    culture: {
+        eyebrow: "our culture",
+
+        title: "People are our driving force",
+
+        description:
+            "We believe logistics is powered by people. That's why we build relationships based on respect, trust, and commitment.",
+
+        highlight:
+            "We want Vita Global Cargo to be a company where clients want to work with us and people want to stay.",
+
+        values: [
+            {
+                title: "People First",
+                description:
+                    "We listen, recognize, and empower talent.",
+            },
+            {
+                title: "Global Vision, Local Service",
+                description:
+                    "We think globally while staying close to our clients.",
+            },
+            {
+                title: "Trust Earned",
+                description:
+                    "Built through transparency, communication, and results.",
+            },
+            {
+                title: "Real Commitment",
+                description:
+                    "Your cargo matters to us as much as it matters to you.",
+            },
+            {
+                title: "Continuous Improvement",
+                description:
+                    "We strive to improve and support your growth.",
+            },
+            {
+                title: "Experience",
+                description:
+                    "Helping us anticipate challenges and find better solutions.",
+            },
+        ],
+    },
+
+    contact: {
+        eyebrow: "contact us",
+
+        title: "Connecting your business to the world",
+
+        description:
+            "Throughout our journey, we learned that logistics is about much more than moving cargo.",
+
+        highlight:
+            "It's about building trust, honoring commitments, and creating lasting relationships.",
+
+        services: [
+            {
+                title: "Courier & Express",
+                subtitle: "Speed and security",
+            },
+            {
+                title: "Air Freight",
+                subtitle: "Connecting destinations",
+            },
+            {
+                title: "Ground Freight",
+                subtitle: "Delivering trust",
+            },
+            {
+                title: "Ocean Freight",
+                subtitle: "Moving the world",
+            },
+        ],
+
+        form: {
+            title: "Let's talk about your next operation",
+
+            name: "Full Name",
+            email: "Email",
+            phone: "Phone",
+
+            message: "Message",
+
+            button: "Send Message",
+        },
+    },
+
 
     footer: {
         description:

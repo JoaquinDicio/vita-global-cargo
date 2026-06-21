@@ -117,6 +117,93 @@ export default {
         button: "Solicitar Cotización",
     },
 
+    culture: {
+        eyebrow: "nuestra cultura",
+
+        title: "Las personas, nuestro motor",
+
+        description:
+            "Creemos que la logística la hacen las personas. Por eso construimos relaciones basadas en el respeto, la confianza y el compromiso.",
+
+        highlight:
+            "Queremos que Vita Global Cargo sea una empresa donde los clientes quieran trabajar y las personas quieran permanecer.",
+
+        values: [
+            {
+                title: "Valoramos a las personas",
+                description:
+                    "Escuchamos, reconocemos y potenciamos el talento.",
+            },
+            {
+                title: "Mirada global, atención local",
+                description:
+                    "Pensamos globalmente, pero nos mantenemos cerca tuyo.",
+            },
+            {
+                title: "Confianza que se gana",
+                description:
+                    "Se construye con transparencia, comunicación y resultados.",
+            },
+            {
+                title: "Compromiso real",
+                description:
+                    "Tu carga importa tanto para nosotros como para vos.",
+            },
+            {
+                title: "Mejora continua",
+                description:
+                    "Buscamos ser mejores para acompañar tu crecimiento.",
+            },
+            {
+                title: "Experiencia",
+                description:
+                    "Para anticiparnos y encontrar mejores soluciones.",
+            },
+        ],
+    },
+
+    contact: {
+        eyebrow: "contactanos",
+
+        title: "Conectamos tu negocio con el mundo",
+
+        description:
+            "A lo largo de nuestra trayectoria aprendimos que la logística no se trata solamente de mover carga.",
+
+        highlight:
+            "Se trata de generar confianza, cumplir compromisos y construir relaciones que perduren en el tiempo.",
+
+        services: [
+            {
+                title: "Courier y express",
+                subtitle: "Rapidez y seguridad",
+            },
+            {
+                title: "Transporte Aéreo",
+                subtitle: "Conectamos destinos",
+            },
+            {
+                title: "Transporte Terrestre",
+                subtitle: "Entregamos confianza",
+            },
+            {
+                title: "Transporte Marítimo",
+                subtitle: "Movemos el mundo",
+            },
+        ],
+
+        form: {
+            title: "Hablemos de tu próxima operación",
+
+            name: "Nombre completo",
+            email: "Email",
+            phone: "Teléfono",
+            message: "Mensaje",
+
+            button: "Enviar mensaje",
+        },
+    },
+
     footer: {
         description:
             "Soluciones logísticas internacionales aéreas, marítimas y terrestres con atención personalizada para cada operación.",

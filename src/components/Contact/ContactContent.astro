@@ -1,33 +1,25 @@
 ---
 import Container from "../Container.astro";
 import SectionHeader from "../SectionHeader.astro";
+
 import plane from "../../assets/icons/plane.svg";
 import boat from "../../assets/icons/boat.svg";
 import truck from "../../assets/icons/truck.svg";
 import courier from "../../assets/icons/package.svg";
 
-const services = [
-    {
-        icon: courier,
-        title: "Courier y express",
-        subtitle: "Rapidez y seguridad",
-    },
-    {
-        icon: plane,
-        title: "Transporte Aéreo",
-        subtitle: "Conectamos destinos",
-    },
-    {
-        icon: truck,
-        title: "Transporte Terrestre",
-        subtitle: "Entregamos confianza",
-    },
-    {
-        icon: boat,
-        title: "Transporte Marítimo",
-        subtitle: "Movemos el mundo",
-    },
-];
+const { lang: t } = Astro.props;
+
+interface Service {
+    title: string;
+    subtitle: string;
+}
+
+const icons = [courier, plane, truck, boat];
+
+const services = (t.contact.services as Service[]).map((service, index) => ({
+    ...service,
+    icon: icons[index],
+}));
 ---
 
 <Container class="py-16 md:py-22">
@@ -37,17 +29,15 @@ const services = [
             <SectionHeader
                 text_color="light"
                 align="left"
-                eyebrow="contactanos"
-                title="Conectamos tu negocio con el mundo"
-                description="A lo largo de nuestra trayectoria aprendimos que la logística no se trata solamente de mover carga."
+                eyebrow={t.contact.eyebrow}
+                title={t.contact.title}
+                description={t.contact.description}
             />
 
             <p class="mt-6 text-white font-semibold max-w-md mx-auto md:mx-0">
-                Se trata de generar confianza, cumplir compromisos y construir
-                relaciones que perduren en el tiempo.
+                {t.contact.highlight}
             </p>
 
-            <!-- Servicios -->
             <!-- Desktop -->
             <div class="hidden md:grid grid-cols-2 gap-x-12 gap-y-8 mt-12">
                 {
@@ -105,7 +95,7 @@ const services = [
                 class="bg-black/35 backdrop-blur-sm rounded-xl p-6 md:p-8 border border-white/10"
             >
                 <h3 class="text-white text-[20px] font-bold leading-tight">
-                    Hablemos de tu próxima operación
+                    {t.contact.form.title}
                 </h3>
 
                 <div class="w-12 h-1 bg-(--color-accent) mt-4 mb-8"></div>
@@ -113,7 +103,7 @@ const services = [
                 <form class="space-y-3">
                     <div>
                         <label class="block text-white text-sm mb-2">
-                            Nombre completo
+                            {t.contact.form.name}
                         </label>
 
                         <input
@@ -124,7 +114,7 @@ const services = [
 
                     <div>
                         <label class="block text-white text-sm mb-2">
-                            Email
+                            {t.contact.form.email}
                         </label>
 
                         <input
@@ -135,7 +125,7 @@ const services = [
 
                     <div>
                         <label class="block text-white text-sm mb-2">
-                            Teléfono
+                            {t.contact.form.phone}
                         </label>
 
                         <input
@@ -146,7 +136,7 @@ const services = [
 
                     <div>
                         <label class="block text-white text-sm mb-2">
-                            Mensaje
+                            {t.contact.form.message}
                         </label>
 
                         <textarea
@@ -159,7 +149,7 @@ const services = [
                         type="submit"
                         class="w-full h-10 rounded bg-(--color-accent) text-white font-semibold"
                     >
-                        Enviar mensaje
+                        {t.contact.form.button}
                     </button>
                 </form>
             </div>

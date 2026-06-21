@@ -1,6 +1,7 @@
 ---
 import Container from "../Container.astro";
 import SectionHeader from "../SectionHeader.astro";
+
 import people from "../../assets/icons/people.svg";
 import global from "../../assets/icons/global.png";
 import done from "../../assets/icons/done.png";
@@ -8,39 +9,15 @@ import shield from "../../assets/icons/shield.png";
 import up from "../../assets/icons/uparrow.png";
 import experience from "../../assets/icons/30+.svg";
 
-const culture_info = [
-    {
-        icon: people,
-        title: "Valoramos a las personas",
-        description: "Escuchamos, reconocemos y potenciamos el talento.",
-    },
-    {
-        icon: global,
-        title: "Mirada global, atención local",
-        description: "Pensamos globalmente, pero nos mantenemos cerca tuyo.",
-    },
-    {
-        icon: done,
-        title: "Confianza que se gana",
-        description:
-            "Se construye con tansparencia, comunicación y resultados.",
-    },
-    {
-        icon: shield,
-        title: "Compromiso real",
-        description: "Tu carga importa tanto para nosotros como para vos.",
-    },
-    {
-        icon: up,
-        title: "Mejora continua",
-        description: "Buscamos ser mejores para acompañar tu crecimiento.",
-    },
-    {
-        icon: experience,
-        title: "Experiencia",
-        description: "Para anticiparnos y encontrar mejores soluciones.",
-    },
-];
+const { lang: t } = Astro.props;
+
+const icons = [people, global, done, shield, up, experience];
+
+const culture_info = t.culture.values.map((item, index) => ({
+    ...item,
+    icon: icons[index],
+    smallIcon: index === 5,
+}));
 ---
 
 <Container
@@ -49,14 +26,13 @@ const culture_info = [
     <div class="max-w-lg text-center md:text-left">
         <SectionHeader
             align="left"
-            title="Las personas, nuestro motor"
-            eyebrow="nuestra cultura"
-            description="Creemos que la logística la hacen las personas. Por eso construimos relaciones basadas en el respeto, la confianza y el compromiso."
+            title={t.culture.title}
+            eyebrow={t.culture.eyebrow}
+            description={t.culture.description}
         />
 
         <p class="font-bold text-(--color-text) mt-5">
-            Queremos que Vita Global Cargo sea una empresa donde los clientes
-            quieran trabajar y las personas quieran permanecer.
+            {t.culture.highlight}
         </p>
     </div>
 
@@ -67,7 +43,7 @@ const culture_info = [
                     <div class="h-14 flex items-center justify-center">
                         <img
                             class={`object-contain w-auto ${
-                                info.title === "Experiencia" ? "h-10" : "h-14"
+                                info.smallIcon ? "h-10" : "h-14"
                             }`}
                             src={info.icon.src}
                             alt={info.title}
