@@ -1,9 +1,13 @@
 ---
-const { t, lang } = Astro.props;
 import logo from "../assets/white-logo.png";
+import flagEs from "../assets/flagES.svg";
+import flagUs from "../assets/flagUS.svg";
+
+const { t, lang } = Astro.props;
 
 const switchLangHref = lang === "en" ? "/" : "/en";
 const switchLangLabel = lang === "en" ? "ES" : "EN";
+const switchLangIcon = lang === "en" ? flagEs : flagUs;
 ---
 
 <header
@@ -43,9 +47,15 @@ const switchLangLabel = lang === "en" ? "ES" : "EN";
             <div class="hidden lg:flex items-center gap-6">
                 <a
                     href={switchLangHref}
-                    class="text-white font-semibold text-[14px] hover:opacity-80 transition"
+                    class="flex items-center gap-2 text-white font-semibold text-[14px] hover:opacity-80 transition"
                 >
-                    {switchLangLabel}
+                    <img
+                        src={switchLangIcon.src}
+                        alt={switchLangLabel}
+                        class="w-5 h-5 object-contain"
+                    />
+
+                    <span>{switchLangLabel}</span>
                 </a>
 
                 <a
@@ -60,9 +70,15 @@ const switchLangLabel = lang === "en" ? "ES" : "EN";
             <div class="lg:hidden flex items-center gap-5">
                 <a
                     href={switchLangHref}
-                    class="text-white text-sm font-semibold hover:opacity-80 transition"
+                    class="flex items-center gap-2 text-white text-sm font-semibold hover:opacity-80 transition"
                 >
-                    {switchLangLabel}
+                    <img
+                        src={switchLangIcon.src}
+                        alt={switchLangLabel}
+                        class="w-5 h-5 object-contain"
+                    />
+
+                    <span>{switchLangLabel}</span>
                 </a>
 
                 <button
