@@ -3,9 +3,13 @@ import Container from "../Container.astro";
 import SectionHeader from "../SectionHeader.astro";
 import map from "../../assets/map.png";
 
-const { lang, t } = Astro.props;
+import { Headset, BadgeDollarSign, Clock3, Handshake } from "lucide-astro";
+
+const { t } = Astro.props;
 
 const STEPS = t.process.steps;
+
+const stepIcons = [Headset, BadgeDollarSign, Clock3, Handshake];
 ---
 
 <Container class="py-16 md:py-22 bg-white">
@@ -35,25 +39,31 @@ const STEPS = t.process.steps;
                     (
                         step: { title: string; description: string },
                         idx: number,
-                    ) => (
-                        <div class="flex md:flex-col items-center gap-4 md:gap-0 text-left md:text-center">
-                            <div class="w-20.5 h-20.5 shrink-0 rounded-full bg-(--color-secondary) flex items-center justify-center z-10">
-                                <span class="text-2xl font-bold">
-                                    {idx + 1}
-                                </span>
-                            </div>
+                    ) => {
+                        const Icon = stepIcons[idx];
 
-                            <div>
-                                <h3 class="md:mt-3 font-bold text-lg text-(--color-text)">
-                                    {step.title}
-                                </h3>
+                        return (
+                            <div class="flex md:flex-col items-center gap-4 md:gap-0 text-left md:text-center">
+                                <div class="w-20.5 h-20.5 shrink-0 rounded-full bg-(--color-secondary) flex items-center justify-center z-10">
+                                    <Icon
+                                        size={38}
+                                        class="text-white"
+                                        strokeWidth={2.2}
+                                    />
+                                </div>
 
-                                <p class="mt-1 text-sm text-black/70 max-w-55">
-                                    {step.description}
-                                </p>
+                                <div>
+                                    <h3 class="md:mt-3 font-bold text-lg text-(--color-text)">
+                                        {step.title}
+                                    </h3>
+
+                                    <p class="mt-1 text-sm text-black/70 max-w-55">
+                                        {step.description}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                    ),
+                        );
+                    },
                 )
             }
         </div>
@@ -64,7 +74,7 @@ const STEPS = t.process.steps;
     >
         <img
             src={map.src}
-            alt="mapa"
+            alt="map"
             class="w-full max-w-xl md:max-w-md lg:max-w-none"
         />
 
