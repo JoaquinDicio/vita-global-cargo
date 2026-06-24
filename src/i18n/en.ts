@@ -277,9 +277,9 @@ const en: Language = {
 
         contact: {
             title: "Contact",
-            email: "info@vitaglobalcargo.com",
-            phone: "+54 11 1234 5678",
-            location: "Buenos Aires, Argentina",
+            email: "consultas@vitaglobalcargo.com",
+            phone: "+54 11 5157-4818",
+            location: "MENDOZA 3075 Piso 4 Depto. Z 43 de la C.A.B.A, Argentina.",
         },
 
         copyright: "All rights reserved",
