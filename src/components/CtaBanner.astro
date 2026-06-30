@@ -1,0 +1,32 @@
+---
+import Container from "./Container.astro";
+const { t } = Astro.props;
+---
+ <div class="bg-cover bg-center" style="background-image: url('/hero.png');">
+        <div
+            class="py-10
+            bg-[linear-gradient(to_right,rgba(8,21,40,1)_0%,rgba(8,21,40,0.8)_30%,rgba(28,75,142,0.2)_50%,rgba(8,21,40,0.8)_70%,rgba(8,21,40,1)_100%)]
+            max-md:bg-[rgba(8,21,40,0.75)]"
+        >
+            <Container
+                class="text-center md:text-left flex md:flex-row flex-col md:items-center justify-center md:justify-between"
+            >
+                <div class="max-w-none md:max-w-sm">
+                    <h3 class="font-bold text-[24px] mb-5">
+                        {t.cta.title}
+                    </h3>
+
+                    <p class="text-[14px]">
+                        {t.cta.description}
+                    </p>
+                </div>
+
+                <a
+                    href="#contact"
+                    class="inline-flex mt-5 items-center bg-(--color-accent) justify-center text-[14px] px-6 py-4 rounded-md font-semibold text-white hover:bg-red-600 transition"
+                >
+                    {t.cta.button}
+                </a>
+            </Container>
+        </div>
+    </div>
