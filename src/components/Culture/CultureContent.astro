@@ -13,7 +13,7 @@ const { lang, t } = Astro.props;
 
 const icons = [people, global, done, shield, up, experience];
 
-const culture_info = t.culture.values.map((item, index) => ({
+const culture_info = t.culture.values.map((item : { title: string; description: string }, index : number) => ({
     ...item,
     icon: icons[index],
     smallIcon: index === 5,
@@ -38,7 +38,7 @@ const culture_info = t.culture.values.map((item, index) => ({
 
     <div class="grid grid-cols-2 md:grid-cols-3 gap-3 w-full lg:w-xl">
         {
-            culture_info.map((info) => (
+            culture_info.map((info : { smallIcon: boolean; icon: { src: string }; title: string; description: string }) => (
                 <div class="min-h-55 md:min-h-auto md:aspect-square p-3 rounded bg-white shadow-[0_0_15px_rgba(0,0,0,0.08)] flex flex-col items-center justify-center text-center text-black">
                     <div class="h-14 flex items-center justify-center">
                         <img
