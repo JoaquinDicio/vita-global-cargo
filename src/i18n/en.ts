@@ -1,6 +1,17 @@
 import type { Language } from "./types";
 
 const en: Language = {
+
+    seo: {
+        title:
+            "International Logistics | Air, Ocean & Ground Freight | Vita Global Cargo",
+
+        description:
+            "Vita Global Cargo provides international logistics solutions including air freight, ocean freight, ground transportation, courier, imports and exports.",
+
+        keywords:
+            "international logistics, freight forwarder, air freight, ocean freight, ground transportation, courier, imports, exports, logistics company",
+    },
     header: {
         links: [
             { href: "#services", label: "Services" },

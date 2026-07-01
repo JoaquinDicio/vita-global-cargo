@@ -1,5 +1,16 @@
 import type { Language } from "./types";
 const es: Language = {
+
+    seo: {
+	title:
+		"Logística Internacional | Transporte Aéreo, Marítimo y Terrestre | Vita Global Cargo",
+
+	description:
+		"Vita Global Cargo ofrece soluciones de logística internacional para importaciones, exportaciones, transporte aéreo, marítimo, terrestre y courier. Más de 30 años conectando empresas con el mundo.",
+
+	keywords:
+		"logística internacional, transporte internacional, freight forwarder, transporte marítimo, transporte aéreo, transporte terrestre, courier internacional, importaciones, exportaciones, operador logístico",
+},
     header: {
         links: [
             { href: "#services", label: "Servicios" },

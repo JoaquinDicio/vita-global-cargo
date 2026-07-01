@@ -1,0 +1,5 @@
+User-agent: *
+
+Allow: /
+
+Sitemap: https://vitaglobalcargo.com/sitemap-index.xml

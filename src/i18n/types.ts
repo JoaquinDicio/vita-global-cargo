@@ -1,4 +1,10 @@
 export interface Language {
+    seo: {
+        title: string;
+        description: string;
+        keywords: string;
+    };
+
     header: {
         links: {
             href: string;
